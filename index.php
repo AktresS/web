@@ -11,7 +11,12 @@
 </head>
 <body>
     <?php require "header.php" ?>
-
+    <main>
+        <p>Username: <? if(isset($_COOKIE['username'])) echo($_COOKIE['username']) ?></p>
+        <p>Email: <? if(isset($_COOKIE['email'])) echo($_COOKIE['email']) ?></p>
+        <img src="<? if(isset($_COOKIE['profile_image'])) echo($_COOKIE['profile_image']) ?>" alt="">
+    </main>
+    
     <?php require "form.php" ?>
 </body>
 </html>
